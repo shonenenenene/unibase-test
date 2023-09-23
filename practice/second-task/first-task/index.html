@@ -8,14 +8,26 @@
   </head>
   <body>
     <div class="container">
-      <input class="input" id="search" type="text" placeholder="Search" />
+      <form id="search-form">
+        <input
+          class="search-input"
+          id="search-input"
+          type="text"
+          placeholder="Search"
+        />
+        <button class="search-btn button" type="button" id="search-btn">
+          Clear
+        </button>
+      </form>
       <table class="data-table">
         <thead>
           <tr>
-            <th><button id="userId">userId</button></th>
-            <th><button id="id">id</button></th>
-            <th><button id="title">title</button></th>
-            <th><button id="body">body</button></th>
+            <th>
+              <button class="th-button button" id="userId">userId</button>
+            </th>
+            <th><button class="th-button button" id="id">id</button></th>
+            <th><button class="th-button button" id="title">title</button></th>
+            <th><button class="th-button button" id="body">body</button></th>
           </tr>
         </thead>
         <tbody id="table-content"></tbody>

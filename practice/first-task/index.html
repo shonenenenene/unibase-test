@@ -8,77 +8,71 @@
   </head>
   <body>
     <div class="contacts">
-      <div class="contacts__content">
-        <h1 class="contacts__title title">Оставить заявку</h1>
-        <button class="contacts__btn">Написать</button>
-        <div class="modal">
-          <h2 class="modal__title title">Стать партнёром проекта</h2>
-          <form class="modal__form">
-            <label class="modal__org-input label" for="org-input">
-              <input class="input" type="text" id="org-input" required />
-              <span>Название организации</span></label
-            >
-            <label class="modal__phone-input label" for="phone-input">
-              <input class="input" type="text" id="phone-input" required /><span
-                >Телефон</span
-              ></label
-            >
+      <h1 class="contacts__title title">Оставить заявку</h1>
+      <button class="contacts__btn">Написать</button>
+      <div class="modal">
+        <h2 class="modal__title title">Стать партнёром проекта</h2>
+        <form class="modal__form">
+          <label class="modal__org-input label" for="org-input">
+            <input class="input" type="text" id="org-input" required />
+            <span>Название организации</span></label
+          >
+          <label class="modal__phone-input label" for="phone-input">
+            <input class="input" type="text" id="phone-input" required /><span
+              >Телефон</span
+            ></label
+          >
+          <label class="modal__mail-input label" for="mail-input"
+            ><input class="input" type="email" id="mail-input" required /><span
+              >E-mail</span
+            ></label
+          >
+          <label class="modal__direction-input label" for="direction-input">
+            <input
+              class="input"
+              list="directions"
+              id="direction-input"
+              required
+            />
+            <datalist id="directions">
+              <option>Экология</option>
+              <option>Химия</option>
+              <option>Строительство</option>
+            </datalist>
+            <span>Направление</span>
+          </label>
 
-            <label class="modal__mail-input label" for="mail-input"
-              ><input
-                class="input"
-                type="email"
-                id="mail-input"
-                required
-              /><span>E-mail</span></label
-            >
-            <label class="modal__direction-input label" for="direction-input">
-              <input
-                class="input"
-                list="directions"
-                id="direction-input"
-                required
-              />
-              <datalist id="directions">
-                <option>Экология</option>
-                <option>Химия</option>
-                <option>Строительство</option>
-              </datalist>
-              <span>Направление</span>
-            </label>
+          <label class="modal__site-input label" for="site-input"
+            ><input class="input" type="text" id="site-input"
+          /></label>
 
-            <label class="modal__site-input label" for="site-input"
-              ><input class="input" type="text" id="site-input"
-            /></label>
+          <label class="modal__vk-input" for="vk-input"
+            ><input class="input" type="text" id="vk-input"
+          /></label>
+          <label class="modal__ok-input" for="ok-input"
+            ><input class="input" type="text" id="ok-input"
+          /></label>
 
-            <label class="modal__vk-input" for="vk-input"
-              ><input class="input" type="text" id="vk-input"
-            /></label>
-            <label class="modal__ok-input" for="ok-input"
-              ><input class="input" type="text" id="ok-input"
-            /></label>
+          <label class="modal__fb-input" for="fb-input"
+            ><input class="input" type="text" id="fb-input"
+          /></label>
 
-            <label class="modal__fb-input" for="fb-input"
-              ><input class="input" type="text" id="fb-input"
-            /></label>
+          <label class="modal__insta-input" for="insta-input">
+            <input class="input" type="text" id="insta-input"
+          /></label>
 
-            <label class="modal__insta-input" for="insta-input">
-              <input class="input" type="text" id="insta-input"
-            /></label>
+          <label class="modal__yt-input" for="yt-input"
+            ><input class="input" type="text" id="yt-input"
+          /></label>
 
-            <label class="modal__yt-input" for="yt-input"
-              ><input class="input" type="text" id="yt-input"
-            /></label>
-
-            <label class="modal__name-input" for="name-input"
-              ><input class="input" type="text" id="name-input" /><span
-                >Руководитель</span
-              ></label
-            >
-            <button class="modal__send-btn">Стать партнером проекта</button>
-          </form>
-          <button class="modal__cancel-btn">Отменить</button>
-        </div>
+          <label class="modal__name-input" for="name-input"
+            ><input class="input" type="text" id="name-input" /><span
+              >Руководитель</span
+            ></label
+          >
+          <button class="modal__send-btn">Стать партнером проекта</button>
+        </form>
+        <button class="modal__cancel-btn">Отменить</button>
       </div>
     </div>
     <script src="./index.js"></script>

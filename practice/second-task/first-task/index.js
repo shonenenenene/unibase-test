@@ -11,7 +11,9 @@
 
   const tableContent = document.getElementById("table-content");
   const tableButtons = document.querySelectorAll("th button");
-  const searchInput = document.getElementById("search");
+  const searchInput = document.getElementById("search-input");
+  const clearButton = document.getElementById("search-btn");
+  const searchForm = document.getElementById("search-form");
 
   searchInput.addEventListener("input", (ev) => {
     const filterVal = ev.target.value;
@@ -25,6 +27,11 @@
     } else {
       getTableContent(tableData);
     }
+  });
+
+  clearButton.addEventListener("click", () => {
+    searchForm.reset();
+    getTableContent(tableData);
   });
 
   const createRow = (obj) => {

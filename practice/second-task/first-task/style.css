@@ -1,19 +1,30 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,200;0,300;0,400;1,200&family=Montserrat:wght@200;300;400&display=swap");
 
-body {
+* {
   font-family: "Montserrat", sans-serif;
 }
 
-.input {
+.search-input {
   border: 2px solid #62b3ff;
   border-radius: 5px;
   margin-bottom: 10px;
-  width: 70%;
+  width: 35%;
   height: 30px;
   padding: 5px 20px;
-  font-family: "Montserrat", sans-serif;
   font-weight: bold;
   background-color: #e5f1fd;
+}
+
+.search-btn {
+  height: 44px;
+  width: 80px;
+  border: 2px solid #62b3ff;
+  border-radius: 5px;
+}
+
+.search-btn:hover {
+  background-color: #cbe6ff;
+  transition: 0.3s;
 }
 
 table {
@@ -28,10 +39,25 @@ th {
   border: 2px solid #62b3ff;
 }
 
-th button {
-  background-color: #cbe6ff;
-  border: none;
+.button {
   cursor: pointer;
+  background-color: #e5f1fd;
+  font-weight: bold;
+}
+
+.button:hover {
+  background-color: #cbe6ff;
+  transition: 0.3s;
+}
+
+.button:active {
+  background-color: #59afff;
+  transition: 0.05s;
+  box-shadow: 0px 5px 10px rgba(0, 132, 255, 0.767);
+}
+
+th button {
+  border: none;
   display: block;
   font: inherit;
   height: 100%;
