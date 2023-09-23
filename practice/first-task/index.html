@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     <div class="contacts">
@@ -14,22 +14,67 @@
         <div class="modal">
           <h2 class="modal__title title">Стать партнёром проекта</h2>
           <form class="modal__form">
-            <input class="modal__org-input" type="text" />
-            <input class="modal__phone-input" type="text" />
-            <input class="modal__mail-input" type="email" />
-            <input class="modal__direction-input" list="directions" />
-            <datalist id="directions">
-              <option>Экология</option>
-              <option>Химия</option>
-              <option>Строительство</option>
-            </datalist>
-            <input class="modal__site-input" type="text" />
-            <input class="modal__vk-input" type="text" />
-            <input class="modal__ok-input" type="text" />
-            <input class="modal__fb-input" type="text" />
-            <input class="modal__insta-input" type="text" />
-            <input class="modal__yt-input" type="text" />
-            <input class="modal__name-input" type="text" />
+            <label class="modal__org-input label" for="org-input">
+              <input class="input" type="text" id="org-input" required />
+              <span>Название организации</span></label
+            >
+            <label class="modal__phone-input label" for="phone-input">
+              <input class="input" type="text" id="phone-input" required /><span
+                >Телефон</span
+              ></label
+            >
+
+            <label class="modal__mail-input label" for="mail-input"
+              ><input
+                class="input"
+                type="email"
+                id="mail-input"
+                required
+              /><span>E-mail</span></label
+            >
+            <label class="modal__direction-input label" for="direction-input">
+              <input
+                class="input"
+                list="directions"
+                id="direction-input"
+                required
+              />
+              <datalist id="directions">
+                <option>Экология</option>
+                <option>Химия</option>
+                <option>Строительство</option>
+              </datalist>
+              <span>Направление</span>
+            </label>
+
+            <label class="modal__site-input label" for="site-input"
+              ><input class="input" type="text" id="site-input"
+            /></label>
+
+            <label class="modal__vk-input" for="vk-input"
+              ><input class="input" type="text" id="vk-input"
+            /></label>
+            <label class="modal__ok-input" for="ok-input"
+              ><input class="input" type="text" id="ok-input"
+            /></label>
+
+            <label class="modal__fb-input" for="fb-input"
+              ><input class="input" type="text" id="fb-input"
+            /></label>
+
+            <label class="modal__insta-input" for="insta-input">
+              <input class="input" type="text" id="insta-input"
+            /></label>
+
+            <label class="modal__yt-input" for="yt-input"
+              ><input class="input" type="text" id="yt-input"
+            /></label>
+
+            <label class="modal__name-input" for="name-input"
+              ><input class="input" type="text" id="name-input" /><span
+                >Руководитель</span
+              ></label
+            >
             <button class="modal__send-btn">Стать партнером проекта</button>
           </form>
           <button class="modal__cancel-btn">Отменить</button>

@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,200;0,300;0,400;1,200&family=Montserrat:wght@200;300;400&display=swap");
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.input {
+  border: 2px solid #62b3ff;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  width: 70%;
+  height: 30px;
+  padding: 5px 20px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  background-color: #e5f1fd;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th {
+  font-weight: bold;
+  height: inherit;
+  padding: 0;
+  border: 2px solid #62b3ff;
+}
+
+th button {
+  background-color: #cbe6ff;
+  border: none;
+  cursor: pointer;
+  display: block;
+  font: inherit;
+  height: 100%;
+  margin: 0;
+  min-width: max-content;
+  padding: 0.5rem 1.5rem;
+  position: relative;
+  text-align: left;
+  width: 100%;
+}
+
+th button::after {
+  position: absolute;
+  right: 0.25rem;
+  top: 0.7rem;
+  color: #004c94;
+  font-size: 10px;
+}
+
+th button[data-dir="asc"]::after {
+  content: "▲";
+}
+
+th button[data-dir="desc"]::after {
+  content: "▼";
+}
+
+td {
+  padding: 0.5rem 1rem;
+  text-align: left;
+  border: 1px solid #62b3ff6e;
+}
