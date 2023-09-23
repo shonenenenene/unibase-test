@@ -1,9 +1,13 @@
 (async () => {
-  const tableData = await fetch(
-    "https://jsonplaceholder.typicode.com/posts"
-  ).then((data) => data.json());
+  const data = await fetch("https://jsonplaceholder.typicode.com/posts").then(
+    (data) => data.json()
+  );
 
-  console.log(tableData, "asdasda");
+  const tableData = data.map((item) => ({
+    ...item,
+    title: item.title.replace(/[^a-zA-Z0-9 ]/g, ""),
+    body: item.body.replace(/[^a-zA-Z0-9 ]/g, ""),
+  }));
 
   const tableContent = document.getElementById("table-content");
   const tableButtons = document.querySelectorAll("th button");
