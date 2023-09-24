@@ -9,7 +9,7 @@
   <body>
     <div class="contacts">
       <h1 class="contacts__title title">Оставить заявку</h1>
-      <button class="contacts__btn">Написать</button>
+      <button class="contacts__btn button">Написать</button>
       <div class="modal">
         <h2 class="modal__title title">Стать партнёром проекта</h2>
         <form class="modal__form">
@@ -20,6 +20,7 @@
                   class="input lb-input"
                   type="text"
                   id="org-input"
+                  value="АВЦ"
                   required
                 />
                 <span class="req-title inner-lb"
@@ -31,6 +32,7 @@
                   class="input lb-input"
                   type="text"
                   id="phone-input"
+                  value="+7 933 848-34-33"
                   required
                 /><span class="req-title inner-lb">Телефон</span></label
               >
@@ -39,80 +41,109 @@
                   class="input lb-input"
                   type="email"
                   id="mail-input"
+                  value="avc@gmail.com"
                   required
                 /><span class="req-title inner-lb">E-mail</span></label
               >
             </div>
             <div class="modal__img-section">
-              <span class="req-title">Логотип (jpeg, png)</span>
+              <span class="req-title logo-title">Логотип (jpeg, png)</span>
               <div class="img-container">
-                <img src="./img/modal/Ellipse 44.png" />
-                <img src="./img/modal/Group 2394.png" />
-                <img src="./img/modal/Vector.png" />
-                <a href="#">Выберите файл</a>
+                <img class="placeholder-img" src="./img/modal/Ellipse 44.png" />
+                <img class="exit-img" src="./img/modal/Group 2394.png" />
+                <img class="upload-img" src="./img/modal/Vector.png" />
+                <a class="upload-link" href="#">Выберите<br />файл</a>
               </div>
             </div>
           </div>
-
           <label class="modal__direction-input label" for="direction-input">
             <input
               class="input lb-input"
               list="directions"
               id="direction-input"
+              value="Экология"
               required
             />
             <datalist id="directions">
-              <option>Экология</option>
-              <option>Химия</option>
-              <option>Строительство</option>
+              <option value="Экология" />
+              <option value="Химия" />
+              <option value="Строительство" />
             </datalist>
             <span class="inner-lb">Направление</span>
           </label>
 
           <label class="modal__site-input label" for="site-input"
-            ><input class="input" type="text" id="site-input" /><img
+            ><input
+              class="input"
+              type="text"
+              id="site-input"
+              value="avc.ru" /><img
               class="input-icon"
               src="./img/modal/icons/www.png"
           /></label>
 
           <label class="modal__vk-input label" for="vk-input"
-            ><input class="input" type="text" id="vk-input" /><img
+            ><input
+              class="input"
+              type="text"
+              id="vk-input"
+              value="vk.com/shans" /><img
               class="input-icon"
               src="./img/modal/icons/vk.png"
           /></label>
           <label class="modal__ok-input label" for="ok-input"
-            ><input class="input" type="text" id="ok-input" /><img
+            ><input
+              class="input"
+              type="text"
+              id="ok-input"
+              value="ok.com/shans" /><img
               class="input-icon"
               src="./img/modal/icons/ok.png"
           /></label>
 
           <label class="modal__fb-input label" for="fb-input"
-            ><input class="input" type="text" id="fb-input" /><img
+            ><input
+              class="input"
+              type="text"
+              id="fb-input"
+              value="facebook.com/shans" /><img
               class="input-icon"
               src="./img/modal/icons/fb.png"
           /></label>
 
           <label class="modal__insta-input label" for="insta-input">
-            <input class="input" type="text" id="insta-input" /><img
+            <input
+              class="input"
+              type="text"
+              id="insta-input"
+              value="instagram.com/shans" /><img
               class="input-icon"
               src="./img/modal/icons/ins.png"
           /></label>
 
           <label class="modal__yt-input label" for="yt-input"
-            ><input class="input" type="text" id="yt-input" /><img
+            ><input
+              class="input"
+              type="text"
+              id="yt-input"
+              value="youtube.com/shans" /><img
               class="input-icon"
               src="./img/modal/icons/yt.png"
           /></label>
 
           <label class="modal__name-input label" for="name-input"
-            ><input class="input lb-input" type="text" id="name-input" /><span
-              class="inner-lb"
-              >Руководитель</span
-            ></label
+            ><input
+              class="input lb-input"
+              type="text"
+              id="name-input"
+              value="Александров Иван Васильевич"
+            /><span class="inner-lb">Руководитель</span></label
           >
-          <button class="modal__send-btn">Стать партнером проекта</button>
+          <button class="modal__send-btn button" type="submit">
+            Стать партнёром проекта
+          </button>
         </form>
-        <button class="modal__cancel-btn">Отменить</button>
+        <button class="modal__cancel-btn button">Отменить</button>
       </div>
     </div>
     <script src="./index.js"></script>

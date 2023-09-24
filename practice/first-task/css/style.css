@@ -6,28 +6,50 @@
   font-weight: 800;
   font-size: 28px;
   line-height: 34px;
+  cursor: default;
+  margin-bottom: 35px;
 }
 
-button {
+.contacts {
+  position: relative;
+  height: 1500px;
+  font-family: "PT Sans", sans-serif;
+  padding-top: 200px;
+}
+
+.contacts.active {
+  background: #0000006b;
+}
+
+.contacts__title {
+  text-align: center;
+  font-size: 50px;
+}
+
+.button {
   font-family: "Lato", sans-serif;
+  min-width: 200px;
 }
 
 .modal {
   max-width: 754px;
-  min-width: 754px;
+  width: 100%;
   border-radius: 12px;
-  background-color: antiquewhite;
+  background-color: #fff;
   padding: 53px 98px;
   pointer-events: none;
   opacity: 0;
   position: absolute;
   left: 50%;
+  top: 100px;
   transform: translate(-50%, 3%);
+  display: flex;
+  flex-direction: column;
 }
 
 .modal.active {
   pointer-events: all;
-  transition: 0.5s all;
+  transition: 0.3s all;
   opacity: 1;
 }
 
@@ -36,6 +58,8 @@ button {
   border: 1px solid #d6dade;
   padding: 16px;
   font-family: "PT Sans", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
   width: 100%;
 }
 
@@ -53,6 +77,7 @@ button {
 
 .modal__section {
   display: flex;
+  flex-wrap: wrap-reverse;
   gap: 26px;
 }
 
@@ -64,42 +89,110 @@ button {
 }
 
 .modal__img-section {
-  width: 175px;
-}
-
-.contacts {
-  height: 1500px;
-}
-
-.contacts.active {
-  background: rgba(0, 0, 0, 0.2);
+  min-width: 175px;
 }
 
 .contacts__btn {
   width: 147px;
   height: 48px;
-  border: 1px solid #e5266e;
+  border: 2px solid #e5266e;
   border-radius: 5px;
   color: #e5266e;
+  display: block;
+  margin: 10px auto;
+}
+
+.contacts__btn:hover {
+  background-color: #e5266e;
+  color: #fff;
+  transition: 0.3s;
 }
 
 .req-title::before {
   content: "✱ ";
-  color: red;
+  color: #ff0000;
 }
 
 .label {
   position: relative;
+  min-width: 200px;
 }
 
 .inner-lb {
   position: absolute;
   left: 16px;
-  font-family: "PT Sans", sans-serif;
+  top: 8px;
+  color: #6a6e72;
+  font-size: 12px;
+  line-height: 16px;
+  cursor: auto;
 }
 
 .input-icon {
   position: absolute;
   right: 15px;
   top: 19px;
+}
+
+.img-container {
+  position: relative;
+}
+
+.logo-title {
+  display: block;
+  margin-bottom: 14px;
+  color: #6a6e72;
+  font-size: 14px;
+  text-align: center;
+}
+
+.exit-img {
+  position: absolute;
+  top: 11px;
+  right: 11px;
+  cursor: pointer;
+}
+
+.upload-img {
+  position: absolute;
+  top: 40px;
+  left: 65px;
+}
+
+.upload-link {
+  position: absolute;
+  top: 90px;
+  left: 40px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.modal__send-btn {
+  width: 100%;
+  background-color: #e5266e;
+  padding: 15px;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.modal__send-btn:hover {
+  background-color: #df0055;
+  transition: 0.3s;
+}
+
+.modal__cancel-btn {
+  font-family: "PT Sans", sans-serif;
+  color: #0848c0;
+  border-radius: 5px;
+  width: 30%;
+  padding: 15px;
+  text-align: center;
+  display: block;
+  margin: 3px auto;
+}
+.modal__cancel-btn:hover {
+  background-color: #0848c021;
+  transition: 0.3s;
 }
