@@ -13,23 +13,50 @@
       <div class="modal">
         <h2 class="modal__title title">Стать партнёром проекта</h2>
         <form class="modal__form">
-          <label class="modal__org-input label" for="org-input">
-            <input class="input" type="text" id="org-input" required />
-            <span>Название организации</span></label
-          >
-          <label class="modal__phone-input label" for="phone-input">
-            <input class="input" type="text" id="phone-input" required /><span
-              >Телефон</span
-            ></label
-          >
-          <label class="modal__mail-input label" for="mail-input"
-            ><input class="input" type="email" id="mail-input" required /><span
-              >E-mail</span
-            ></label
-          >
+          <div class="modal__section">
+            <div class="modal__forms-section">
+              <label class="modal__org-input label" for="org-input">
+                <input
+                  class="input lb-input"
+                  type="text"
+                  id="org-input"
+                  required
+                />
+                <span class="req-title inner-lb"
+                  >Название организации</span
+                ></label
+              >
+              <label class="modal__phone-input label" for="phone-input">
+                <input
+                  class="input lb-input"
+                  type="text"
+                  id="phone-input"
+                  required
+                /><span class="req-title inner-lb">Телефон</span></label
+              >
+              <label class="modal__mail-input label" for="mail-input"
+                ><input
+                  class="input lb-input"
+                  type="email"
+                  id="mail-input"
+                  required
+                /><span class="req-title inner-lb">E-mail</span></label
+              >
+            </div>
+            <div class="modal__img-section">
+              <span class="req-title">Логотип (jpeg, png)</span>
+              <div class="img-container">
+                <img src="./img/modal/Ellipse 44.png" />
+                <img src="./img/modal/Group 2394.png" />
+                <img src="./img/modal/Vector.png" />
+                <a href="#">Выберите файл</a>
+              </div>
+            </div>
+          </div>
+
           <label class="modal__direction-input label" for="direction-input">
             <input
-              class="input"
+              class="input lb-input"
               list="directions"
               id="direction-input"
               required
@@ -39,34 +66,47 @@
               <option>Химия</option>
               <option>Строительство</option>
             </datalist>
-            <span>Направление</span>
+            <span class="inner-lb">Направление</span>
           </label>
 
           <label class="modal__site-input label" for="site-input"
-            ><input class="input" type="text" id="site-input"
+            ><input class="input" type="text" id="site-input" /><img
+              class="input-icon"
+              src="./img/modal/icons/www.png"
           /></label>
 
-          <label class="modal__vk-input" for="vk-input"
-            ><input class="input" type="text" id="vk-input"
+          <label class="modal__vk-input label" for="vk-input"
+            ><input class="input" type="text" id="vk-input" /><img
+              class="input-icon"
+              src="./img/modal/icons/vk.png"
           /></label>
-          <label class="modal__ok-input" for="ok-input"
-            ><input class="input" type="text" id="ok-input"
-          /></label>
-
-          <label class="modal__fb-input" for="fb-input"
-            ><input class="input" type="text" id="fb-input"
-          /></label>
-
-          <label class="modal__insta-input" for="insta-input">
-            <input class="input" type="text" id="insta-input"
+          <label class="modal__ok-input label" for="ok-input"
+            ><input class="input" type="text" id="ok-input" /><img
+              class="input-icon"
+              src="./img/modal/icons/ok.png"
           /></label>
 
-          <label class="modal__yt-input" for="yt-input"
-            ><input class="input" type="text" id="yt-input"
+          <label class="modal__fb-input label" for="fb-input"
+            ><input class="input" type="text" id="fb-input" /><img
+              class="input-icon"
+              src="./img/modal/icons/fb.png"
           /></label>
 
-          <label class="modal__name-input" for="name-input"
-            ><input class="input" type="text" id="name-input" /><span
+          <label class="modal__insta-input label" for="insta-input">
+            <input class="input" type="text" id="insta-input" /><img
+              class="input-icon"
+              src="./img/modal/icons/ins.png"
+          /></label>
+
+          <label class="modal__yt-input label" for="yt-input"
+            ><input class="input" type="text" id="yt-input" /><img
+              class="input-icon"
+              src="./img/modal/icons/yt.png"
+          /></label>
+
+          <label class="modal__name-input label" for="name-input"
+            ><input class="input lb-input" type="text" id="name-input" /><span
+              class="inner-lb"
               >Руководитель</span
             ></label
           >

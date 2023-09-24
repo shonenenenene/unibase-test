@@ -9,11 +9,11 @@ const arr = [10, 12, 15, 20];
 // и setTimeout сработает 4 раза с последним значением i, в нашем случае с i = 4.
 // Элемента с таким номером в массиве arr попросту нет.
 
-// for (var i = 0; i < arr.length; i++) {
-//   setTimeout(function () {
-//     console.log(arr[i] > 13 ? `Good: ${arr[i]}` : `Bad: ${arr[i]}`);
-//   }, 3000);
-// }
+for (var i = 0; i < arr.length; i++) {
+  setTimeout(function () {
+    console.log(arr[i] > 13 ? `Good: ${arr[i]}` : `Bad: ${arr[i]}`);
+  }, 3000);
+}
 
 // 1 ВАРИАНТ:
 
