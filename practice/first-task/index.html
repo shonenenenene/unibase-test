@@ -17,11 +17,11 @@
             <div class="modal__forms-section">
               <label class="modal__org-input label" for="org-input">
                 <input
-                  class="input lb-input"
+                  class="input lb-input req-input"
                   type="text"
                   id="org-input"
                   value="АВЦ"
-                  required
+                  name="org"
                 />
                 <span class="req-title inner-lb"
                   >Название организации</span
@@ -29,20 +29,19 @@
               >
               <label class="modal__phone-input label" for="phone-input">
                 <input
-                  class="input lb-input"
+                  class="input lb-input req-input"
                   type="text"
                   id="phone-input"
                   value="+7 933 848-34-33"
-                  required
+                  name="phone"
                 /><span class="req-title inner-lb">Телефон</span></label
               >
               <label class="modal__mail-input label" for="mail-input"
                 ><input
-                  class="input lb-input"
-                  type="email"
+                  class="input lb-input req-input"
                   id="mail-input"
                   value="avc@gmail.com"
-                  required
+                  name="mail"
                 /><span class="req-title inner-lb">E-mail</span></label
               >
             </div>
@@ -58,18 +57,18 @@
           </div>
           <label class="modal__direction-input label" for="direction-input">
             <input
-              class="input lb-input"
+              class="input lb-input req-input"
               list="directions"
               id="direction-input"
               value="Экология"
-              required
+              name="directions"
             />
             <datalist id="directions">
               <option value="Экология" />
               <option value="Химия" />
               <option value="Строительство" />
             </datalist>
-            <span class="inner-lb">Направление</span>
+            <span class="req-title inner-lb">Направление</span>
           </label>
 
           <label class="modal__site-input label" for="site-input"
