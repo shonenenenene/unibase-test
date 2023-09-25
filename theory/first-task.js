@@ -34,9 +34,11 @@ for (let i = 0; i < arr.length; i++) {
 // 2 ВАРИАНТ:
 //Можно использовать замыкание.
 for (var i = 0; i < arr.length; i++) {
-  (function (i) {
+  (function (counter) {
     setTimeout(function () {
-      console.log(arr[i] > 13 ? `Good: ${arr[i]}` : `Bad: ${arr[i]}`);
+      console.log(
+        arr[counter] > 13 ? `Good: ${arr[counter]}` : `Bad: ${arr[counter]}`
+      );
     }, 3000);
   })(i);
 }

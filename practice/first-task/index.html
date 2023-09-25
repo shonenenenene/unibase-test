@@ -20,8 +20,11 @@
                   class="input lb-input req-input"
                   type="text"
                   id="org-input"
-                  value="АВЦ"
                   name="org"
+                  placeholder="Введите название организации"
+                  required
+                  oninvalid="this.setCustomValidity('Это поле должно быть заполнено')"
+                  onchange="this.setCustomValidity('')"
                 />
                 <span class="req-title inner-lb"
                   >Название организации</span
@@ -32,7 +35,11 @@
                   class="input lb-input req-input"
                   type="text"
                   id="phone-input"
-                  value="+7 933 848-34-33"
+                  pattern="^\+7 \d{3} \d{3}-\d{2}-\d{2}$"
+                  placeholder="Введите номер телефона"
+                  required="Заполните в формате: +7 XXX XXX-XX-XX"
+                  oninvalid="this.setCustomValidity('Заполните в формате: +7 XXX XXX-XX-XX')"
+                  onchange="this.setCustomValidity('')"
                   name="phone"
                 /><span class="req-title inner-lb">Телефон</span></label
               >
@@ -40,8 +47,13 @@
                 ><input
                   class="input lb-input req-input"
                   id="mail-input"
-                  value="avc@gmail.com"
                   name="mail"
+                  type="text"
+                  placeholder="Введите E-mail"
+                  required
+                  pattern="^\S+@\S+\.\S+$"
+                  oninvalid="this.setCustomValidity('Некорректный формат электронной почты')"
+                  onchange="this.setCustomValidity('')"
                 /><span class="req-title inner-lb">E-mail</span></label
               >
             </div>
@@ -60,8 +72,12 @@
               class="input lb-input req-input"
               list="directions"
               id="direction-input"
-              value="Экология"
               name="directions"
+              pattern="[Ээ]кология|[Хх]имия|[Сс]троительство"
+              required
+              placeholder="Выберите направление"
+              oninvalid="this.setCustomValidity('Выберите направление')"
+              onchange="this.setCustomValidity('')"
             />
             <datalist id="directions">
               <option value="Экология" />
@@ -71,22 +87,22 @@
             <span class="req-title inner-lb">Направление</span>
           </label>
 
-          <label class="modal__site-input label" for="site-input"
-            ><input
+          <label class="modal__site-input label" for="site-input">
+            <input
               class="input"
               type="text"
               id="site-input"
-              value="avc.ru" /><img
-              class="input-icon"
-              src="./img/modal/icons/www.png"
-          /></label>
+              placeholder="Введите адрес сайта"
+            />
+            <img class="input-icon" src="./img/modal/icons/www.png" />
+          </label>
 
           <label class="modal__vk-input label" for="vk-input"
             ><input
               class="input"
               type="text"
               id="vk-input"
-              value="vk.com/shans" /><img
+              placeholder="vk.com/***" /><img
               class="input-icon"
               src="./img/modal/icons/vk.png"
           /></label>
@@ -95,7 +111,7 @@
               class="input"
               type="text"
               id="ok-input"
-              value="ok.com/shans" /><img
+              placeholder="ok.com/***" /><img
               class="input-icon"
               src="./img/modal/icons/ok.png"
           /></label>
@@ -105,7 +121,7 @@
               class="input"
               type="text"
               id="fb-input"
-              value="facebook.com/shans" /><img
+              placeholder="facebook.com/***" /><img
               class="input-icon"
               src="./img/modal/icons/fb.png"
           /></label>
@@ -115,7 +131,7 @@
               class="input"
               type="text"
               id="insta-input"
-              value="instagram.com/shans" /><img
+              placeholder="instagram.com/***" /><img
               class="input-icon"
               src="./img/modal/icons/ins.png"
           /></label>
@@ -125,7 +141,7 @@
               class="input"
               type="text"
               id="yt-input"
-              value="youtube.com/shans" /><img
+              placeholder="youtube.com/***" /><img
               class="input-icon"
               src="./img/modal/icons/yt.png"
           /></label>
@@ -135,7 +151,7 @@
               class="input lb-input"
               type="text"
               id="name-input"
-              value="Александров Иван Васильевич"
+              placeholder="Введите ФИО"
             /><span class="inner-lb">Руководитель</span></label
           >
           <button class="modal__send-btn button" type="submit">
