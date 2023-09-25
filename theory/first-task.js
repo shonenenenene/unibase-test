@@ -33,6 +33,7 @@ for (let i = 0; i < arr.length; i++) {
 
 // 2 ВАРИАНТ:
 //Можно использовать замыкание.
+
 for (var i = 0; i < arr.length; i++) {
   (function (counter) {
     setTimeout(function () {
