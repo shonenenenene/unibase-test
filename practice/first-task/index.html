@@ -38,7 +38,7 @@
                   pattern="^\+7 \d{3} \d{3}-\d{2}-\d{2}$"
                   placeholder="Введите номер телефона"
                   required="Заполните в формате: +7 XXX XXX-XX-XX"
-                  oninvalid="this.setCustomValidity('Заполните в формате: +7 XXX XXX-XX-XX')"
+                  oninvalid="this.setCustomValidity('Это поле должно быть заполнено в формате: +7 XXX XXX-XX-XX')"
                   onchange="this.setCustomValidity('')"
                   name="phone"
                 /><span class="req-title inner-lb">Телефон</span></label
@@ -106,6 +106,7 @@
               class="input-icon"
               src="./img/modal/icons/vk.png"
           /></label>
+
           <label class="modal__ok-input label" for="ok-input"
             ><input
               class="input"
