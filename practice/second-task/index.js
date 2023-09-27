@@ -5,8 +5,8 @@
 
   const tableData = data.map((item) => ({
     ...item,
-    title: item.title.replace(/[^a-zA-Z0-9 ]/g, ""),
-    body: item.body.replace(/[^a-zA-Z0-9 ]/g, ""),
+    title: item.title.replace(/[^a-zA-Z0-9 ]/g, " "),
+    body: item.body.replace(/[^a-zA-Z0-9 ]/g, " "),
   }));
 
   const tableContent = document.getElementById("table-content");
@@ -15,22 +15,40 @@
   const clearButton = document.getElementById("search-btn");
   const searchForm = document.getElementById("search-form");
 
+  let filterValue = "";
+
+  const generateFilter = (str) => {
+    return (item) => item.body.includes(str) || item.title.includes(str);
+  };
+
   searchInput.addEventListener("input", (ev) => {
     const filterVal = ev.target.value;
+    const activeButton = [...tableButtons].find((item) => {
+      return item.getAttribute("data-dir");
+    });
+    const sortId = activeButton ? activeButton.id : null;
+    const direction = activeButton
+      ? activeButton.getAttribute("data-dir")
+      : null;
+    const currentDirection = direction === "desc" ? "asc" : "desc";
+
     if (filterVal.length >= 3) {
-      getTableContent(
-        tableData.filter(
-          (item) =>
-            item.body.includes(filterVal) || item.title.includes(filterVal)
-        )
+      sortData(
+        tableData.filter(generateFilter(filterVal)),
+        sortId,
+        currentDirection
       );
+      filterValue = filterVal;
     } else {
-      getTableContent(tableData);
+      sortData(tableData, sortId, currentDirection);
+      filterValue = "";
     }
   });
 
   clearButton.addEventListener("click", () => {
     searchForm.reset();
+    filterValue = "";
+    resetButtons();
     getTableContent(tableData);
   });
 
@@ -55,6 +73,10 @@
   };
 
   const sortData = (data, param, direction = "asc") => {
+    if (!param) {
+      getTableContent(data);
+      return;
+    }
     const sortedData =
       direction == "asc"
         ? [...data].sort(function (a, b) {
@@ -75,13 +97,12 @@
             }
             return 0;
           });
-
     getTableContent(sortedData);
   };
 
   const resetButtons = (event) => {
     [...tableButtons].map((button) => {
-      if (button !== event.target) {
+      if (!event || button !== event.target) {
         button.removeAttribute("data-dir");
       }
     });
@@ -93,10 +114,18 @@
     button.addEventListener("click", (e) => {
       resetButtons(e);
       if (e.target.getAttribute("data-dir") == "desc") {
-        sortData(tableData, e.target.id, "desc");
+        sortData(
+          tableData.filter(generateFilter(filterValue)),
+          e.target.id,
+          "desc"
+        );
         e.target.setAttribute("data-dir", "asc");
       } else {
-        sortData(tableData, e.target.id, "asc");
+        sortData(
+          tableData.filter(generateFilter(filterValue)),
+          e.target.id,
+          "asc"
+        );
         e.target.setAttribute("data-dir", "desc");
       }
     });
